@@ -10,6 +10,7 @@ app.use(express.json());
 // you need to import `blogPostsRouter` router and route
 // requests to HTTP requests to `/blog-posts` to `blogPostsRouter`
 app.use("/blog-posts", blogPostsRouter);
+app.use(express.static("public"));
 
 // both runServer and closeServer need to access the same
 // server object, so we declare `server` here, and then when
